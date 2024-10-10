@@ -25,7 +25,7 @@ export class MyActor extends AbstractActor implements IMyActor {
     await this.registerActorTimer(this.timerName, this.callback, this.duePeriod, this.durationPeriod);
   }
 
-  async stopSimulation(): Promise<void> {
+  async stop(): Promise<void> {
     console.log(`Stopping actor ${this.getActorId()}`);
     await this.unregisterActorTimer(this.timerName);
   }
