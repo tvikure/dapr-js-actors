@@ -1,4 +1,4 @@
-# dapr-js-actors
+# dapr-js-actors (not working in kubernetes)
 
 This is a simple dapr side car actor app to demonstrate timers in actors
 
