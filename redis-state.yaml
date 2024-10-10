@@ -1,0 +1,15 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: redis-state
+  namespace: default
+spec:
+  type: state.redis
+  version: v1
+  metadata:
+  - name: redisHost
+    value: "my-redis-master.default.svc.cluster.local:6379"  # Name of the service you created for Redis
+  - name: redisPassword
+    value: "" # Add your redis password here
+  - name: actorStateStore
+    value: "true"  # This enables the state store for actors  # Set this if your Redis requires a password
